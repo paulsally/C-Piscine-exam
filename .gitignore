@@ -10,6 +10,19 @@
 #                                                                              #
 # **************************************************************************** #
 
+# >> Custom to ignore C executables
+# Matches everything recursively
+**
+# Re-allow all folders at any depth
+!**/
+# Re-allow all files at any depth with at least one dot in the name
+!**/*.*
+
+# Re-allow specific important extensionless files (if any)
+!Makefile
+!README
+# << Custom to ignore C executables
+
 # Prerequisites
 *.d
 
@@ -93,5 +106,8 @@ Temporary Items
 .apdisk
 
 
+# >> Custom ignores
 # Vim temporary files
 *.swp
+# Files created by Xcode when compiling with debugging
+**/*.dSYM/
