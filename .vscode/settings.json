@@ -3,6 +3,7 @@
 	"editor.formatOnSave": false, // only if you want auto fomattting on saving the file
 	"editor.detectIndentation": false,
 	"editor.guides.indentation": false,
+	"editor.inlineSuggest.enabled": false,
 	"codam-norminette-3.command": "/usr/local/Caskroom/miniconda/base/envs/c_env/bin/norminette", // command that the highlighter executes to get the norm errors
 	"codam-norminette-3.commandTimeoutMs": 10000, // Kill norminette process after this time (in ms) default 10000
 	"codam-norminette-3.ignoreErrors": [ // do not highlight these norm errors
