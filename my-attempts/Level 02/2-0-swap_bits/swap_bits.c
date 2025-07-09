@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hello.c                                            :+:      :+:    :+:   */
+/*   swap_bits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polselli <polselli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 21:38:04 by fwuensch          #+#    #+#             */
-/*   Updated: 2025/07/09 01:32:14 by polselli         ###   ########.fr       */
+/*   Created: 2025/07/08 23:02:57 by polselli          #+#    #+#             */
+/*   Updated: 2025/07/08 23:14:21 by polselli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+unsigned char	swap_bits(unsigned char octet)
 {
-	char	*message;
-
-	message = "Hello World!\n";
-	write (1, message, 13);
+	return ((octet >> 4) | (octet << 4));
 }
