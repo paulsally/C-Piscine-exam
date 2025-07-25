@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   maff_alpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polselli <polselli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 21:38:04 by fwuensch          #+#    #+#             */
-/*   Updated: 2025/07/25 14:20:34 by polselli         ###   ########.fr       */
+/*   Created: 2025/07/20 02:09:13 by polselli          #+#    #+#             */
+/*   Updated: 2025/07/20 02:09:17 by polselli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	char	c;
-	char	c_l;
-
-	c = 'A';
-	while (c <= 'Z')
-	{
-		if (c % 2 != 0)
-		{
-			c_l = c + 32;
-			write (1, &c_l, 1);
-		}
-		else
-		{
-			write (1, &c, 1);
-		}
-		c++;
-	}
-	write (1, "\n", 1);
-	return (0);
+	write  (1, &c, 1);
 }

@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   maff_alpha.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polselli <polselli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 21:38:04 by fwuensch          #+#    #+#             */
-/*   Updated: 2025/07/25 14:20:34 by polselli         ###   ########.fr       */
+/*   Created: 2025/07/25 15:00:19 by polselli          #+#    #+#             */
+/*   Updated: 2025/07/25 15:09:03 by polselli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+char	*ft_strcpy(char *dest, char *src)
 {
-	char	c;
-	char	c_l;
+	char	*ret;
 
-	c = 'A';
-	while (c <= 'Z')
+	ret = dest;
+	while (*src)
 	{
-		if (c % 2 != 0)
-		{
-			c_l = c + 32;
-			write (1, &c_l, 1);
-		}
-		else
-		{
-			write (1, &c, 1);
-		}
-		c++;
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	write (1, "\n", 1);
-	return (0);
+	*dest = '\0';
+	return (ret);
 }
